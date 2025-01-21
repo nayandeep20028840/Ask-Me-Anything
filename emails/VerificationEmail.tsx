@@ -31,7 +31,7 @@ export default function VerificationEmail({ username, otp }: VerificationEmailPr
                     fontStyle="normal"
                 />
             </Head>
-            <Preview>Here&apos;s your verification code: {otp}</Preview>
+            <Preview>Here is your verification code: {otp}</Preview>
             <Section>
                 <Row>
                     <Heading as="h2">Hello {username},</Heading>
