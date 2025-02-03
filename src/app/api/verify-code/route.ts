@@ -7,7 +7,7 @@ export async function POST(request: Request) {
     // console.log("verify code route")
     try {
         const {username, code} = await request.json();
-
+        // console.log(username, code)
         const decodedUsername = decodeURIComponent(username);
         const user = await UserModel.findOne({username: decodedUsername});
 
@@ -61,6 +61,11 @@ export async function POST(request: Request) {
             )
         }
     } catch (error) {
-        
+        return Response.json({
+            success:false,
+            message:"Error verifying user"
+        },{
+            status:500
+        })
     }
 }
