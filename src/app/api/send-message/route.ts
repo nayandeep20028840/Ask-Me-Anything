@@ -10,7 +10,6 @@ export async function POST(request: Request) {
     console.log("Username..", username);
     console.log("content..", content);
 
-
     try {
         const user = await UserModel.findOne({ username });
         if (!user) {

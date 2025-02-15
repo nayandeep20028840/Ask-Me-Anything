@@ -4,7 +4,6 @@ import { authOptions } from "../auth/[...nextauth]/options";
 import mongoose from "mongoose";
 import UserModel from "@/model/User";
 
-
 export async function GET(request: Request) {
     await dbConnect();
 

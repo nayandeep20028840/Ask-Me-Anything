@@ -1,7 +1,4 @@
-
-
 "use client";
-
 
 import { MessageCard } from "@/components/MessageCard";
 import React, { useCallback, useEffect, useState } from "react";

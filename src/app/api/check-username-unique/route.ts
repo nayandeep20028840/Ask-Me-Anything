@@ -12,7 +12,6 @@ export async function GET(request: Request) {
 
     await dbConnect();
 
-
     try {
         const {searchParams} = new URL(request.url);    
 

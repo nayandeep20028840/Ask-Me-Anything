@@ -4,7 +4,8 @@ import dbConnect from '@/lib/dbConnect';
 import { User } from 'next-auth';
 import { authOptions } from '../../auth/[...nextauth]/options';
 
-export async function DELETE( request: Request,
+export async function DELETE(
+    request: Request,
     { params }: { params: { messageid: string } }
 ) {
     const messageId = params.messageid;
@@ -13,7 +14,7 @@ export async function DELETE( request: Request,
 
     const session = await getServerSession(authOptions);
 
-    const _user: User = session?.user as User
+    const _user: User = session?.user as User;
     if (!session || !_user) {
         return Response.json(
             { success: false, message: 'Not authenticated' },
